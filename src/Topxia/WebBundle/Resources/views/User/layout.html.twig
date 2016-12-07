@@ -22,13 +22,8 @@
     {% if 'ROLE_TEACHER' in user.roles %}
       <li {% if pageNav == 'teaching' %}class="active"{% endif %}><a href="{{ path('user_teaching_classrooms', {id:user.id}) }}">{{'在教%name%'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}</a></li>
     {% endif %}
-    <li {% if pageNav == 'learn' %}class="active"{% endif %}><a href="{{ path('user_learn', {id:user.id}) }}">{{'在学课程'|trans}}</a></li>
-    <li {% if pageNav == 'learning' %}class="active"{% endif %}><a href="{{ path('user_learning_classrooms', {id:user.id}) }}">{{'在学%name%'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}</a></li>
 
 
-    <li {% if pageNav == 'favorited' %}class="active"{% endif %}><a href="{{ path('user_favorited', {id:user.id}) }}">{{'收藏课程'|trans}}</a></li>
-    <li {% if pageNav == 'group' %}class="active"{% endif %}><a href="{{path('user_group',{id:user.id})}}">{{'加入小组'|trans}}</a></li>
-    <li {% if pageNav == 'friend' %}class="active"{% endif %}><a href="{{ path('user_following', {id:user.id}) }}">{{'关注'|trans}}&nbsp;/&nbsp;{{'粉丝'|trans}}</a></li>
   </ul>
   {% block main %}{% endblock %}
 {% endblock %}
