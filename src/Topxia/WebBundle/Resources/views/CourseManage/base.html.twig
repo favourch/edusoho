@@ -71,7 +71,7 @@ isCoursePublished: course.status,
         {% endif %}
 
         <div class="form-group">
-          <label class="col-md-2 control-label">{% if setting('default.user_name') %}{{ setting('default.user_name')|default('学员'|trans) }}{% else %}{{ '学员'|trans }}{% endif %}{{ '有效期'|trans }}</label>
+          <label class="col-md-2 control-label">{% if setting('default.user_name') %}{{ setting('default.user_name')|default('学习'|trans) }}{% else %}{{ '学习'|trans }}{% endif %}{{ '周期'|trans }}</label>
           <div class="col-md-8 controls radios">
             {% if course.status == 'published' %}
               <input type="hidden" name="expiryMode" value="{{ course.expiryMode }}">

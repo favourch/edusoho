@@ -90,11 +90,6 @@
               <span {% if course.locked|default(0) == 1 %}class="es-icon es-icon-lock" aria-hidden="true" {% endif %}></span>{{'教师设置'|trans}}
             </a>
           </li>
-          <li class="list-group-item {% if side_nav == 'students' %}active{% endif %}">
-            <a href="{{ path('course_manage_students', {id:course.id}) }}">
-              <span></span>{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% endif %}{{'管理'|trans}}
-            </a>
-          </li>
         </ul>
 
         <ul class="list-group">
@@ -131,28 +126,6 @@
               <span {% if course.locked|default(0) == 1 %}class="es-icon es-icon-lock" aria-hidden="true" {% endif %}></span>{{'试卷管理'|trans}}
             </a>
           </li>
-          <li class="list-group-item {% if side_nav == 'testCheck' %}active{% endif %}">
-            <a href="{{ path('course_manage_test_check', {id:course.id, status:'reviewing'}) }}"><span></span>{{'试卷批阅'|trans}}</a>
-          </li>
-          {% if is_plugin_installed('Homework') %}
-            <li class="list-group-item {% if side_nav == 'homeworkCheck' %}active{% endif %}">
-              <a href="{{ path('course_homework_check_list', {courseId:course.id,status:'reviewing'}) }}"><span></span>{{'作业批改'|trans}}</a>
-            </li>
-          {% endif %}
-        </ul>
-
-        <ul class="list-group">
-          <li class="list-group-heading">{{'课程运营'|trans}}</li>
-          <li class="list-group-item {% if side_nav == 'course_manage_data' %}active{% endif %}">
-            <a href="{{path('course_manage_data',{id:course.id})}}">
-              <span></span>{{'课程学习数据'|trans}}</a>
-          </li>
-
-          {% if app.user.isAdmin() or setting('course.teacher_search_order') == 1 %}
-            <li class="list-group-item {% if side_nav == 'course_manage_order' %}active{% endif %}">
-              <a href="{{path('course_manage_order',{id:course.id})}}"><span></span>{{'课程订单查询'|trans}}</a>
-            </li>
-          {% endif %}
         </ul>
       </div>
     {% endblock %}
