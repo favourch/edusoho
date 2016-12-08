@@ -44,22 +44,9 @@
   <div class="course-info">
     <h2 class="title">
       {{ course.title }}
-      <span class="es-qrcode top" data-url="{{path('course_qrcode',{id: course.id})}}">
-        <i class="es-icon es-icon-qrcode"></i>
-        <span class="qrcode-popover">
-          <img src="" alt="">
-          {{'扫二维码继续学习'|trans}}
-          {{'二维码时效为半小时'|trans}}
-        </span>
-      </span>
     </h2>
     <div class="subtitle">{{ course.subtitle }}</div>
     <div class="metas">
-      <div class="score">
-        {{ web_macro.star(course.rating) }}
-        <span>({{ course.ratingNum }}{{'人'|trans}})</span>
-      </div>
-
       {% if member and member.deadline > 0 %}
         {% if member.deadline > 'now'|date('U') %}
           <p class="expiry-date hidden-sm">
