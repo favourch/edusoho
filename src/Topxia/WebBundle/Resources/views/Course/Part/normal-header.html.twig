@@ -47,11 +47,19 @@
     </h2>
     <div class="subtitle">{{ course.subtitle }}</div>
     <div class="metas">
+        <div class="score">
+            <i class="es-icon es-icon-star color-warning"></i>
+            <i class="es-icon es-icon-star color-warning"></i>
+            <i class="es-icon es-icon-star color-warning"></i>
+            <i class="es-icon es-icon-star color-warning"></i>
+            <i class="es-icon es-icon-star color-warning"></i>
+            <span>精品推荐</span>
+        </div>
       {% if member and member.deadline > 0 %}
         {% if member.deadline > 'now'|date('U') %}
           <p class="expiry-date hidden-sm">
             <span class="mrm">{{'有效期至'|trans}}</span>
-            <span>{{ member.deadline|date('Y-m-d H:i') }}</span>
+            <span>{{ member.deadline|date('Y-m-d') }}</span>
           </p>
         {% else %}
          <div class="alert alert-danger alert-dismissable">
@@ -70,15 +78,15 @@
 
       {% if not member %}
         {% if course.buyExpiryTime %}
-          <p class="expiry-date hidden-sm">{{ '购买截止日期: '|trans }}{{ course.buyExpiryTime|date('Y-m-d H:i') }}</p>
+          <p class="expiry-date hidden-sm">{{ '报名截止日期: '|trans }}{{ course.buyExpiryTime|date('Y-m-d') }}</p>
         {% endif %}
 
         {% if course.expiryDay %}
           <p class="expiry-date hidden-sm">
             {% if course.expiryMode|default(null) == 'date' %}
-              {{'学习有效期至: '|trans}}{{course.expiryDay|date('Y-m-d H:i')}}
+              {{'学习结束日期: '|trans}}{{course.expiryDay|date('Y-m-d')}}
             {% else %}
-              {{'学习有效期: '|trans}} {{course.expiryDay}}{{'天'|trans}}
+              {{'学习周期: '|trans}} {{course.expiryDay}}{{'天'|trans}}
             {% endif %}
           </p>
         {% endif %}
@@ -132,7 +140,7 @@
 
 {% macro student_num(course) %}
   <div class="student-num hidden-xs">
-      <i class="es-icon es-icon-people"></i>{{'%studentNum%人'|trans({'%studentNum%': course.maxStudentNum}) }}
+      <i class="es-icon es-icon-people"></i>小班教学
   </div>
 {% endmacro %}
 
