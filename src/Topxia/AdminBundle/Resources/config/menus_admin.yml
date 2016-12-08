@@ -117,28 +117,6 @@ admin:
                         admin_teacher_promote_list:
                             name: 教师推荐
                             disable: true
-                admin_approval_manage:
-                    name: 实名认证管理
-                    children:
-                        admin_approval_approvals:
-                            name: 实名认证管理
-                            router_params:
-                                approvalStatus: approving
-                            disable: true
-                            children:
-                                admin_approval_cancel:
-                                    name: 撤销
-                                    router_params:
-                                        id: (user.id)
-                                    class: 'btn cancel-approval'
-                                    mode: none
-                                    group: groupButton
-                admin_message_manage:
-                    name: 私信管理
-                    children:
-                        admin_message:
-                            name: 私信管理
-                            disable: true
         admin_course:
             name: 课程
             children:
@@ -251,8 +229,6 @@ admin:
                                     visable: ( course.status in ['closed', 'draft'])
                         admin_course_recommend_list:
                             name: 课程推荐
-                        admin_course_data:
-                            name: 课程统计
                 admin_open_course_manage:
                     name: 公开课管理
                     router_name: admin_open_course
@@ -263,40 +239,6 @@ admin:
                             router_name: admin_open_course
                         admin_open_course_recommend_list:
                             name: 公开课推荐
-                            disable: true
-                        admin_opencourse_analysis:
-                            name: 公开课统计
-                            disable: true
-                admin_course_thread:
-                    name: 话题管理
-                    children:
-                        admin_course_thread_manage:
-                            name: 课程话题
-                            router_name: admin_thread
-                            disable: true
-                admin_course_question:
-                    name: 问答管理
-                    children:
-                        admin_course_question_manage:
-                            name: 问答管理
-                            router_name: admin_question
-                            router_params:
-                                postStatus: unPosted
-                            disable: true
-                admin_course_note:
-                    name: 笔记管理
-                    children:
-                        admin_course_note_manage:
-                            name: 笔记管理
-                            router_name: admin_course_note
-                            disable: true
-                admin_course_review:
-                    name: 评价管理
-                    children:
-                        admin_course_review_tab:
-                            name: 课程评价
-                            router_name: admin_review
-                            group: 1
                             disable: true
                 admin_course_category:
                     name: 分类管理
@@ -351,23 +293,6 @@ admin:
                                     router_name: admin_article_category_create
                                     mode: modal
                                     group: topBtn
-                admin_operation_group:
-                    name: 小组管理
-                    children:
-                        admin_operation_group_manage:
-                            name: 小组管理
-                            disable: true
-                            router_name: admin_group
-                            children:
-                                admin_operation_group_create:
-                                    name: 创建小组
-                                    router_name: group_add
-                                    group: topBtn
-                                    blank: 1
-                        admin_operation_group_thread:
-                            name: 话题管理
-                            disable: true
-                            router_name: admin_groupThread
                 admin_announcement:
                     name: '网站公告管理'
                     group: 2
@@ -532,26 +457,6 @@ admin:
                     children:
                         admin_article_setting:
                             name: 资讯
-                            disable: true
-                        admin_group_set:
-                            name: 小组
-                            disable: true
-                        admin_invite_set:
-                            name: '邀请码设置'
-                            disable: true
-                admin_setting_finance:
-                    name: 账务设置
-                    children:
-                        admin_payment:
-                            name: 支付
-                            disable: true
-                            router_name: admin_setting_payment
-                        admin_coin_settings:
-                            name: 虚拟币
-                            disable: true
-                            router_name: admin_coin_settings
-                        admin_setting_refund:
-                            name: 退款
                             disable: true
                 admin_setting_mobile:
                     name: 移动端设置
