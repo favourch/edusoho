@@ -44,19 +44,6 @@
               </div>
             </div>
           </div> #}
-      {% if setting('copyright.thirdCopyright')|default(null) != 1 %}
-        <div class="col-md-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title" id="system-status-title"
-                  data-url="{{ path('admin_system_status') }}">{{ '系统状态'|trans }}</h3>
-            </div>
-            <div id="system-status">
-              <div class="empty">{{ '正在载入数据，请稍等。'|trans }}</div>
-            </div>
-          </div>
-        </div>
-      {% endif %}
       <div id="popular-courses-panel" class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -72,17 +59,6 @@
       </div>
     </div>
 
-    <div class="row">
-      {{ render(controller('TopxiaAdminBundle:Default:userCoinsRecordsBlock')) }}
-    </div>
-
-    <div class="row">
-      {{ render(controller('TopxiaAdminBundle:Default:unsolvedQuestionsBlock')) }}
-    </div>
-
-    <div class="row">
-      {{ render(controller('TopxiaAdminBundle:Default:latestPaidOrdersBlock')) }}
-    </div>
 
   {% else %}
     <div class="row">
