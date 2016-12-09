@@ -661,12 +661,6 @@ web:
                                 side_nav: teachers
                             router_params:
                                 id: (classroom.id)
-                        classroom_manage_assistants:
-                            name: 助教设置
-                            data: 
-                                side_nav: assistants
-                            router_params:
-                                id: (classroom.id)
                 classroom_manage_content:
                     name: 班级管理
                     children:
@@ -677,18 +671,3 @@ web:
                                 side_nav: courses
                             router_params:
                                 id: (classroom.id)
-                        classroom_manage_students:
-                            name: 学员管理
-                            visable: (canManage)
-                            data:
-                                side_nav: students
-                            router_params:
-                                id: (classroom.id)
-                        classroom_manage_testpaper:
-                            name: 试卷批阅
-                            visable: (canHandle)
-                            data:
-                                side_nav: testpaper-check
-                            router_params:
-                                id: (classroom.id)
-                                status: reviewing
