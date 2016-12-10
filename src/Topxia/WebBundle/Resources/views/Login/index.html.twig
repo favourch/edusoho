@@ -9,7 +9,6 @@
 <div class="es-section login-section">
   <div class="logon-tab clearfix">
     <a class="active">{{'登录帐号'|trans}}</a>
-    <a href="{{ path('register', {goto:_target_path}) }}">{{'注册帐号'|trans}}</a>
   </div>
   <div class="login-main">
     <form id="login-form" class="form-vertical" method="post" action="{{ path('login_check') }}">
@@ -48,8 +47,6 @@
     <div class="mbl">
       <a href="{{ path('password_reset') }}">{{'找回密码'|trans}}</a>
       <span class="text-muted mhs">|</span>
-      <span class="text-muted">{{'还没有注册帐号？'|trans}}</span>
-      <a href="{{ path('register', {goto:_target_path}) }}">{{'立即注册'|trans}}</a>
     </div>
 
     {% if setting('login_bind.enabled') %}
