@@ -37,8 +37,12 @@
           </h2>
           <div class="metas">
             <div class="score">
-              {{ web_macro.star(classroom.rating) }}
-              <span>({{ classroom.ratingNum }}{{'评价'|trans}})</span>
+              <i class="es-icon es-icon-star color-warning"></i>
+              <i class="es-icon es-icon-star color-warning"></i>
+              <i class="es-icon es-icon-star color-warning"></i>
+              <i class="es-icon es-icon-star color-warning"></i>
+              <i class="es-icon es-icon-star color-warning"></i>
+              <span>精品推荐</span>
             </div>
             {% if member.role == 'auditor'%}
               <div class="price">
@@ -69,7 +73,7 @@
           <ul class='class-data clearfix {% if classroomMemberLevel and 'auditor' in member.role %}hidden-sm{% else %}two-col{% endif %}'>
             <li>
               <p><i class="es-icon es-icon-person"></i></p>
-              <p>{{'学员'|trans}}({{classroom.studentNum + classroom.auditorNum }})</p>
+              <p>精品小班</p>
             </li>
             <li>
               <span class="es-share top">
