@@ -1912,15 +1912,16 @@ select:-webkit-autofill {
 }
 .es-header {
   background: #212121;
-  height: 60px;
+  height: 70px;
   border: none;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 .es-header .container {
   position: relative;
 }
 .es-header .collapse {
   display: block;
+  font-size: 17px;
 }
 @media (max-width: 767px) {
   .es-header .navbar-header {
@@ -1945,7 +1946,7 @@ select:-webkit-autofill {
   }
 }
 .es-header .navbar-header .navbar-brand > img {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 @media (max-width: 767px) {
