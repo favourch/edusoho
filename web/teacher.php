@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>全部 - 飞渡 - Powered By EduSoho    </title>
+  <title>精英团队 - 飞渡</title>
   <meta name="keywords" content="全部" />
   <meta name="description" content="" />
   <meta content="d7bf4536849c7b62f5a16151c7467a88171f8be6" name="csrf-token" />
