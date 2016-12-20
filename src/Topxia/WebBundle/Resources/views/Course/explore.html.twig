@@ -53,14 +53,6 @@
         </div>
       {% endif %}
       <label class="checkbox-inline">
-        <input type="checkbox" {% if type == 'live'%}checked="true" {% endif %} id="live" value="
-        {% if type == 'all'%}
-          {{ path('course_explore', {category:category, filter: {type: 'live',price: price,currentLevelId: currentLevelId},orderBy: orderBy}) }}
-        {% else %}
-          {{ path('course_explore', {category:category, filter: {type: 'all',price: price,currentLevelId: currentLevelId},orderBy: orderBy}) }}
-        {% endif %}"> {{'直播课程'|trans}}
-      </label>
-      <label class="checkbox-inline">
         <input type="checkbox" {% if price == 'free'%}checked="true" {% endif %} id="free" value="
         {% if price == 'all'%}
           {{ path('course_explore', {category:category, filter: {type: type,price: 'free',currentLevelId: currentLevelId},orderBy: orderBy}) }}
